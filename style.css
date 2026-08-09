@@ -183,6 +183,10 @@ section {
     background-color: #eaeaea;
     cursor: pointer;
 }
+/* Mostra solo i primi 4 elementi quando la griglia è in stato "limited" */
+.gallery-container.limited .gallery-item:nth-child(n+5) {
+    display: none !important;
+}
 
 .img-placeholder {
     width: 100%;

@@ -1,57 +1,63 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-    // ==========================================
-    // 1. GESTIONE DEL FILTRO DELLA GALLERIA
-    // ==========================================
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const artworksGrid = document.getElementById("artworksGrid");
     const galleryItems = document.querySelectorAll('.gallery-item');
+    const toggleBtn = document.getElementById("toggleArtworksBtn");
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Rimuovi classe attiva da tutti i bottoni
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Aggiungi classe attiva al bottone corrente
-            button.classList.add('active');
+    function updateGalleryView() {
+        const isLimited = artworksGrid.classList.contains('limited');
+        const activeBtn = document.querySelector('.filter-btn.active');
+        const filterValue = activeBtn ? activeBtn.getAttribute('data-filter').trim().toLowerCase() : 'all';
 
-            const filterValue = button.getAttribute('data-filter');
+        galleryItems.forEach((item, index) => {
+            const itemCategory = (item.getAttribute('data-category') || '').trim().toLowerCase();
+            const matchesFilter = (filterValue === 'all' || itemCategory === filterValue);
 
-            galleryItems.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-                
-                if (filterValue === 'all' || itemCategory === filterValue) {
-                    item.style.display = ''; 
-                    item.style.opacity = '1';
-                } else {
+            if (matchesFilter) {
+                // Se la griglia è limitata e siamo sul filtro "all", mostra solo le prime 4
+                if (isLimited && filterValue === 'all' && index >= 4) {
                     item.style.display = 'none';
                     item.style.opacity = '0';
+                } else {
+                    item.style.display = 'block';
+                    item.style.opacity = '1';
                 }
-            });
+            } else {
+                item.style.display = 'none';
+                item.style.opacity = '0';
+            }
+        });
+    }
+
+    // 1. Esegui subito al caricamento
+    updateGalleryView();
+
+    // 2. Gestione dei filtri
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            updateGalleryView();
         });
     });
 
-
-    // ==========================================
-    // 2. GESTIONE PULSANTE "Vedi tutte / Comprimi"
-    // ==========================================
-    const toggleBtn = document.getElementById("toggleArtworksBtn");
-    const artworksGrid = document.getElementById("artworksGrid");
-
+    // 3. Gestione pulsante "Mostra tutte / Comprimi"
     if (toggleBtn && artworksGrid) {
         toggleBtn.addEventListener("click", () => {
             artworksGrid.classList.toggle("limited");
             
             if (artworksGrid.classList.contains("limited")) {
-                toggleBtn.textContent = "Vedi tutte";
+                toggleBtn.textContent = "Mostra tutte le opere";
             } else {
                 toggleBtn.textContent = "Comprimi";
             }
+            updateGalleryView();
         });
     }
 });
 
-
 // ==========================================
-// 3. FUNZIONALITÀ LIGHTBOX 
+// FUNZIONALITÀ LIGHTBOX 
 // ==========================================
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -71,15 +77,14 @@ function openLightbox(element) {
     lightboxDesc.innerHTML = description;
 
     lightbox.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Blocca lo scroll di sotto
+    document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
     lightbox.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Ripristina lo scroll
+    document.body.style.overflow = 'auto';
 }
 
-// Chiudi la modale con il tasto ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeLightbox();

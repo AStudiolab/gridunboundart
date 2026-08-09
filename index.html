@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID UNBOUND — Optical Art & Pittura di Necessità</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts per un'estetica editoriale raffinata -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header / Navigazione Minimal -->
+    <header class="main-header">
+        <div class="logo">GU</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#opere">Opere</a>
+            <a href="#biografia">Biografia</a>
+            <a href="#mostre">Percorso</a>
+            <a href="#contatti">Contatti</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section: Dichiarazione d'Intenti -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>GRID UNBOUND</h1>
+            <p class="subtitle">Oltre la superficie: la geometria dell'anima.</p>
+            <blockquote class="hero-quote">
+                "Il bianco e nero simboleggiano le alternative tra speranza e disperazione a cui sarà sempre esposta l'umanità."
+            </blockquote>
+                   </div>
+    </section>
+
+    <!-- Sezione Galleria Interattiva -->
+    <section id="opere" class="gallery-section">
+        <div class="section-title">
+            <h2>OPERE</h2>
+            <p>Seleziona un ciclo per filtrare la visione interiore</p>
+        </div>
+
+        <!-- Filtri JavaScript Estesi -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">Tutte le opere</button>
+            <button class="filter-btn" data-filter="optical">Optical & Geometria</button>
+            <button class="filter-btn" data-filter="inconscio">Inconscio & Dramma</button>
+            <button class="filter-btn" data-filter="3d">Tridimensionalità & Oggetti</button>
+            <button class="filter-btn" data-filter="simbolo">Filosofia & Simbolo</button>
+            <button class="filter-btn" data-filter="natura">Natura & Corpo</button>
+        </div>
+
+        <!-- Griglia Completa 39 Opere -->
+        <div class="gallery-grid">
+
+            <!-- 1. Ferita -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/ferita.jpg" alt="Ferita" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>FERITA</h3>
+                    <p>Acrilico su legno — 60x40 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Un'opera in acrilico su legno (60x40 cm). Su uno sfondo dominato da una texture granulare e molecolare in bianco e nero, si inserisce uno squarcio orizzontale da cui emerge una forma acuminata, seghettata e spinosa di un rosso cupo e sanguigno.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera gioca sul contrasto tra la micro-struttura dello sfondo e la violenza macroscopica del fulcro centrale. La spina rossa non è solo l'agente della lacerazione, ma la ferita stessa che si fa barriera difensiva. C'è un richiamo all'esistenzialismo del dolore: la ferita modifica permanentemente la superficie protettiva dell'io.</p>
+                </div>
+            </div>
+
+            <!-- 2. Abisso -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/abisso.jpg" alt="Abisso" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>ABISSO</h3>
+                    <p>Acrilico su legno — 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno di grandi dimensioni (125x80 cm). La superficie è interamente ricoperta da una fittissima trama organica, quasi cellulare o spugnosa, monocromatica, che crea un senso di profondità infinita e brulicante.</p>
+                    <p class="critica"><strong>Critica:</strong> Abisso annulla la geometria della scacchiera a favore di un horror vacui biologico. È un'opera fortemente introspettiva; lo spettatore viene risucchiato in un labirinto neuronale o subacqueo. Come suggerito dal testo a corredo, il quadro funge da specchio oscuro: perdersi nel dettaglio significa confrontarsi con il vuoto della propria coscienza.</p>
+                </div>
+            </div>
+
+            <!-- 3. La Scala -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/la-scala.jpg" alt="La Scala" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA SCALA</h3>
+                    <p>Acrilico su legno — Ø 100 cm (Tondo)</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Opera circolare (tondo) in acrilico su legno dal diametro di 100 cm. Presenta una struttura geometrica concentrica o spiraliforme che simula una prospettiva architettonica distorta.</p>
+                    <p class="critica"><strong>Critica:</strong> Il formato circolare enfatizza il movimento perpetuo e l'assenza di un punto d'arrivo definitivo. La scala diventa metafora del percorso iniziatico e conoscitivo dell'artista: non serve dominare l'intera struttura (la "latitudine"), ma accettare la vertigine del primo passo all'interno dell'illusione ottica.</p>
+                </div>
+            </div>
+
+            <!-- 4. Nascosto -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/nascondo.jpg" alt="Nascosto" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>NASCOSTO</h3>
+                    <p>Acrilico e olio su legno — 61x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (61x80 cm). Una complessa composizione prospettica che simula un interno surrealista o un corridoio angolare. Il pavimento a scacchi subisce distorsioni ondulatorie, mentre sulla parete di sinistra campeggia un foro/vortice triangolare pure scaccato. Il soffitto è una distesa di rosso piatto e opprimente.</p>
+                    <p class="critica"><strong>Critica:</strong> Eccellente saggio di spazialità alterata. L'artista manipola le regole della prospettiva rinascimentale per creare un senso di straniamento metafisico alla De Chirico. Il contrasto tra il rigore geometrico del bianco e nero e la campitura sanguigna del soffitto genera un'atmosfera claustrofobica, dove l'enigma è "in piena vista".</p>
+                </div>
+            </div>
+
+            <!-- 5. Oblio -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/oblio.jpg" alt="Oblio" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>OBLIO</h3>
+                    <p>Acrilico e olio su legno — 50x50 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (50x50 cm). L'opera è divisa diagonalmente: la metà superiore sinistra è occupata da una scacchiera da cui emergono i rami spogli di un albero; la metà inferiore destra è un piano bianco interrotto da una cavità organica in cui giace una figura umana rannicchiata, nera e lucida, collegata a una linea spezzata rossa.</p>
+                    <p class="critica"><strong>Critica:</strong> Un'opera di forte matrice simbolista ed esistenziale. La scacchiera-albero rappresenta la razionalizzazione della natura o della memoria, mentre la figura fetale nel vuoto evoca il rifugio estremo dalla "follia" del mondo. Quella linea rossa è un cordone ombelicale psicologico, unico legame vitale rimasto prima del totale isolamento.</p>
+                </div>
+            </div>
+
+            <!-- 6. Rinuncia -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/rinuncia.jpg" alt="Rinuncia" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>RINUNCIA</h3>
+                    <p>Acrilico e olio su legno — 105x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (105x80 cm). Due pareti a scacchiera convergono ad angolo, mostrando protuberanze tridimensionali (una mano e un corpo che tentano di spingere attraverso il pattern). Al suolo, su una superficie bianca macchiata da una pozza rossa fluida, giace una figura antropomorfa nera, distesa e inerme.</p>
+                    <p class="critica"><strong>Critica:</strong> Forte drammaturgia visiva. Il pattern optical agisce qui come una prigione elastica ma invalicabile che fagocita i corpi. La figura nera al suolo incarna la resa fisica ("fai finta di morire"), ma la fluidità del rosso suggerisce che la rinuncia sia l'inizio catartico di una transizione verso "strade non viste".</p>
+                </div>
+            </div>
+
+            <!-- 7. Il Tempo -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/tempo.jpg" alt="Il Tempo" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL TEMPO</h3>
+                    <p>Acrilico e olio su legno — 120x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (120x80 cm). Una parete diagonale fortemente scorciata a scacchi divide lo spazio. Da essa si modella una figura antropomorfa interamente scaccata che sembra protendersi in avanti. In basso a destra, una silhouette nera osserva la scena da spalle.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera esplora la relatività e l'inafferrabilità del tempo. La figura che emerge dalla scacchiera è il tempo stesso, un'entità immateriale che si confonde con la struttura dello spazio, lasciando l'individuo (la silhouette nera) in una posizione di eterna e impotente attesa dinanzi all'infinito.</p>
+                </div>
+            </div>
+
+            <!-- 8. Dolore -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/dolore.jpg" alt="Dolore" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>DOLORE</h3>
+                    <p>Acrilico e olio su legno — 80x105 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (80x105 cm). Una mano nera stilizzata cala dall'alto reggendo un filo che manovra una figura-manichino nera in basso. Sulla destra, una parete a scacchi si flette convergendo in un imbuto/tunnel prospettico da cui spunta un pugno chiuso geometrico.</p>
+                    <p class="critica"><strong>Critica:</strong> Una potente allegoria della sottomissione emotiva. Il contrasto tra la bidimensionalità del burattino e la profondità aggressiva del vortice optical descrive la destabilizzazione causata dalla sofferenza. Il pugno che rompe la parete geometrica è la manifestazione violenta e improvvisa del trauma.</p>
+                </div>
+            </div>
+
+            <!-- 9. Marionette -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/marionette.jpg" alt="Marionette" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>MARIONETTE</h3>
+                    <p>Acrilico e olio su legno — 122x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (122x80 cm). All'interno di una stanza prospettica con pareti a scacchi e soffitto/sfondo grigio e rosso, si muovono più figure nere lucide: una a terra, una sospesa centralmente agganciata a un filo, e una terza di profilo che emerge dal margine destro.</p>
+                    <p class="critica"><strong>Critica:</strong> Continuazione tematica del pezzo precedente, l'opera diventa una riflessione corale sul determinismo esistenziale e sociale. Le pareti optical rappresentano le convenzioni e i ruoli predefiniti del "teatrino della vita". Tagliare i fili significa deformare lo spazio circostante, un atto di ribellione complesso e doloroso.</p>
+                </div>
+            </div>
+
+            <!-- 10. Legami -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/legami.jpg" alt="Legami (Dittico)" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LEGAMI (DITTICO)</h3>
+                    <p>Acrilico su legno — 2 tavole 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Due tavole speculari/complementari in acrilico su legno (125x80 cm ciascuna). In entrambe, campiture rosse fluide e frastagliate sulla destra (o sulla sinistra nella seconda tavola) stringono e penetrano corpi e volumi interamente rivestiti dal pattern a scacchi, avvolti da fili tesi come ragnatele.</p>
+                    <p class="critica"><strong>Critica:</strong> Un dittico magistrale sulla tensione relazionale. Il legame non è vissuto come idillio, ma come costrizione necessaria ("lègami così stretto da non respirare"). La scacchiera deforma i corpi rendendoli scultorei, mentre le campiture rosse agiscono come forze viscerali che uniscono o separano drammaticamente le figure dall'umanità.</p>
+                </div>
+            </div>
+
+            <!-- 11. Il Potere -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/il-potere.jpg" alt="Il Potere" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL POTERE</h3>
+                    <p>Acrilico su legno — 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (125x80 cm). Su un pavimento a scacchi che termina bruscamente su un precipizio grigio (da cui colano filamenti rossi), si stagliano due figure: una silhouette nera monumentale vista da dietro e una figura bianca delineata da contorni neri. Sulla destra irrompe una macchia rossa espressionista.</p>
+                    <p class="critica"><strong>Critica:</strong> Un'opera politica e filosofica sull'arbitrio. Il pavimento a scacchi rappresenta l'ordine sociale o la legalità, che tuttavia vacilla sull'orlo del baratro. Le due figure incarnano la dualità del comando (l'opacità del dittatore contro la fragilità della vittima), mentre la macchia rossa simboleggia il prezzo di sangue e l'abuso intrinseco alla gestione del potere.</p>
+                </div>
+            </div>
+
+            <!-- 12. Il Luogo dei Sogni Possibili -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/sogni-possibili.jpg" alt="Il Luogo dei Sogni Possibili" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL LUOGO DEI SOGNI POSSIBILI</h3>
+                    <p>Acrilico su legno — 80x60 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (80x60 cm). Una figura scaccata volge le spalle allo spettatore sulla destra. Sulla sinistra, una gigantesca toppa di serratura si apre come un portale su un paesaggio desertico/onirico dalle tonalità calde (ocra e rosso), in cui si intravede una minuscola figura femminile in abito blu.</p>
+                    <p class="critica"><strong>Critica:</strong> C'è un chiaro omaggio al Surrealismo magico di Magritte. La scacchiera rappresenta la realtà conscia e limitante, mentre la serratura è lo squarcio psicanalitico che permette l'accesso all'inconscio e al desiderio. Il contrasto cromatico tra il rigore monocromo e il calore del deserto esprime la speranza del superamento degli ostacoli interni.</p>
+                </div>
+            </div>
+
+            <!-- 13. Specchio -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/specchio.jpg" alt="Specchio" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SPECCHIO</h3>
+                    <p>Acrilico e olio su legno — 50x60 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (50x60 cm). Una composizione duale: a sinistra, un profilo umano nero fluido da cui cola del colore; a destra, una parete a scacchi da cui emerge, tridimensionale, lo stesso profilo scaccato. Le due figure sembrano sfiorarsi con la lingua. Dall'alto colano rivoli di sangue.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera esplora il tema del Doppelgänger e dell'ombra junghiana. Lo specchio non riflette le fattezze reali, ma la scissione tra la parte liquida/oscura dell'anima e la maschera geometrica/razionale che mostriamo al mondo. Il contatto tra le due lingue è un momento di cruda e intima auto-accettazione del proprio lato oscuro.</p>
+                </div>
+            </div>
+
+            <!-- 14. Il Corridoio -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/il-corridoio.jpg" alt="Il Corridoio" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL CORRIDOIO</h3>
+                    <p>Acrilico e olio su legno — 82x200 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Sviluppo verticale imponente (82x200 cm), acrilico e olio su legno. Una lunghissima prospettiva esasperata in cui pavimento e soffitto a scacchi convergono verso un rettangolo nero assoluto e profondo posto al centro, sormontato da una sottile linea rossa. Una piccola figura nera cammina sul pavimento in basso a destra.</p>
+                    <p class="critica"><strong>Critica:</strong> Quest'opera è un capolavoro di minimalismo esistenziale. La compressione dello spazio costringe l'occhio (e il personaggio) verso l'ignoto. La porta chiusa e nera non è necessariamente negativa: rappresenta il mistero del futuro e la necessità di intendere il percorso stesso come infinito, svincolato dall'ossessione della meta.</p>
+                </div>
+            </div>
+
+            <!-- 15. Spiccare il Volo -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/spiccare-il-volo.jpg" alt="Spiccare il Volo" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SPICCARE IL VOLO</h3>
+                    <p>Acrilico su legno — 42x220 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Opera a sviluppo verticale estremo (42x220 cm), acrilico su legno. Una silhouette nera stilizzata colta nell'atto di slanciarsi verso l'alto attraversa una composizione dove le linee a scacchi si flettono e si espandono, creando un senso di accelerazione ascensionale.</p>
+                    <p class="critica"><strong>Critica:</strong> Il formato così allungato asseconda fisicamente il concetto del volo e dell'evasione. Qui la Op Art perde la sua rigidità claustrofobica per farsi fluida e dinamica, assecondando la transizione del soggetto verso una dimensione di libertà e orizzonte infinito.</p>
+                </div>
+            </div>
+
+            <!-- 16. Svelare -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/svelare.jpg" alt="Svelare" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SVELARE</h3>
+                    <p>Acrilico su legno — 80x150 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (80x150 cm). Un panneggio a scacchi si apre al centro come una coltre o un sipario teatrale, unito o trattenuto da una forma nera lucida centrale, rivelando uno sfondo rosso cupo.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera lavora sulla texture e sull'illusione della morbidezza del tessuto applicata al legno. Svelare il rosso significa squarciare l'illusione ottica del reale per mettere a nudo il nucleo pulsante ed emotivo del proprio essere.</p>
+                </div>
+            </div>
+
+            <!-- 17. Segreti -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/segreti.jpg" alt="Segreti" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SEGRETI</h3>
+                    <p>Acrilico su legno — 120x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (120x80 cm). Una complessa griglia optical prospettica all'interno della quale si aprono delle nicchie cubiche tridimensionali. Alcune di queste nicchie rivelano interni bianchi immacolati, altre interni rosso vivo.</p>
+                    <p class="critica"><strong>Critica:</strong> Rappresentazione geometrica della compartimentazione mentale. I segreti non sono nascosti sotto la superficie, ma sono incastonati nell'architettura stessa della mente, visibili a chi sa guardare oltre l'illusione geometrica. Il bianco e il rosso indicano rispettivamente i segreti dell'innocenza e quelli della colpa o della passione.</p>
+                </div>
+            </div>
+
+            <!-- 18. Affinità -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/affinita.jpg" alt="Affinità" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>AFFINITÀ (DITTICO)</h3>
+                    <p>Acrilico su legno — 100x150 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Dittico in acrilico su legno (100x150 cm). La superficie è un incastro serrato di moduli geometrici scaccati aggettanti e rientranti, interrotti da parallelepipedi rossi e bianchi che si compenetrano alla perfezione.</p>
+                    <p class="critica"><strong>Critica:</strong> Un lavoro sull'armonia formale e l'incastro perfetto. La composizione esprime l'idea dell'anima gemella o della complementarità assoluta attraverso il rigore del design geometrico: due elementi complessi che trovano la stasi e la pace nell'unione perfetta.</p>
+                </div>
+            </div>
+
+            <!-- 19. Forme -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/forme.jpg" alt="Forme" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>FORME (TRITTICO)</h3>
+                    <p>Acrilico su legno — 3 elementi 20x20 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Trittico composto da tre elementi quadrati (20x20 cm ciascuno) in acrilico su legno. Il primo mostra una sfera optical tridimensionale che emerge dalla scacchiera; il secondo un panneggio fluido colante su uno sfondo grigio; il terzo un vortice centrifugo che converge verso un nucleo circolare rosso.</p>
+                    <p class="critica"><strong>Critica:</strong> Un compendio micro-cosmico dello stile dell'artista. Pur nella diversità morfologica (la sfera, il fluido, il vortice), i tre pannelli mantengono un'assoluta coerenza semantica, legati dall'uso della scacchiera come codice universale di decodifica del reale.</p>
+                </div>
+            </div>
+
+            <!-- 20. Libero -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/libero.jpg" alt="Libero" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LIBERO</h3>
+                    <p>Acrilico su legno — 300x150 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Opera monumentale in acrilico su legno (300x150 cm). Un immenso anfiteatro o vortice prospettico a scacchi bianchi e neri che converge verso un fulcro circolare bianco e luminoso al centro.</p>
+                    <p class="critica"><strong>Critica:</strong> Il culmine della ricerca Optical dell'artista. La dimensione imponente avvolge completamente lo spettatore, annullando la percezione dello spazio circostante. La luce centrale simboleggia la libertà assoluta, raggiungibile solo accettando di attraversare la complessità ipnotica e destabilizzante dell'intera struttura esistenziale.</p>
+                </div>
+            </div>
+
+            <!-- 21. Senza Uscita -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/senza-uscita.jpg" alt="Senza Uscita" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SENZA USCITA</h3>
+                    <p>Acrilico su legno — 220x174 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (220x174 cm). Un profondo tunnel geometrico a scacchi che si restringe verso un punto di fuga indefinito.</p>
+                    <p class="critica"><strong>Critica:</strong> Di forte impatto psicologico, l'opera rappresenta l'angoscia della trappola esistenziale. Nonostante la rigorosa razionalità della scacchiera, il tunnel non promette uscite facili, traducendo visivamente l'idea di una vita capace di renderci "schiavi senza catene".</p>
+                </div>
+            </div>
+
+            <!-- 22. Mondo -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/mondo.jpg" alt="Mondo" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>MONDO</h3>
+                    <p>Acrilico su legno — 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (125x80 cm). Composizione in cui ombre scure e distorsioni optical si fondono, creando una topografia tormentata.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera sintetizza la visione dualistica dell'artista: il mondo come unione indissolubile di luce e ombra, odio e amore. La scacchiera si deforma sotto il peso di queste polarità represse.</p>
+                </div>
+            </div>
+
+            <!-- 23. Il Cerchio Oscuro -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/cerchio-oscuro.jpg" alt="Il Cerchio Oscuro" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL CERCHIO OSCURO</h3>
+                    <p>Acrilico su legno — Ø 100 cm (Tondo)</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Opera circolare (diametro 100 cm) in acrilico su legno. Un vortice spiraliforme bianco e nero incentrato su un nucleo profondo.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera formalizza la differenza tra pensiero (lineare/freccia) e sentimento (circolare/moto perpetuo). Il formato del cerchio esalta l'azione emotiva che dà e toglie incessantemente.</p>
+                </div>
+            </div>
+
+            <!-- 24. Scoperta -->
+            <div class="gallery-item" data-category="3d" onclick="openLightbox(this)">
+                <img src="images/scoperta.jpg" alt="Scoperta" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SCOPERTA</h3>
+                    <p>Acrilico e cartone su legno — Ø 100 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (diametro 100 cm) arricchito dall'applicazione di una maschera di cartone.</p>
+                    <p class="critica"><strong>Critica:</strong> L'introduzione dell'elemento tridimensionale (la maschera) rompe l'illusione pittorica. L'atto dello scoprire è inteso come archeologia interiore: sollevare la maschera sociale per trovare il sé autentico, anche a costo di rimanerne spaventati.</p>
+                </div>
+            </div>
+
+            <!-- 25. La Banalità del Male -->
+            <div class="gallery-item" data-category="3d" onclick="openLightbox(this)">
+                <img src="images/banalita-male.jpg" alt="La Banalità del Male" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA BANALITÀ DEL MALE</h3>
+                    <p>Acrilico e cartone su legno — 30x45 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (30x45 cm) con maschera di cartone.</p>
+                    <p class="critica"><strong>Critica:</strong> Esplicito richiamo filosofico ad Hannah Arendt. Il male viene descritto non come mostruosità epica, ma come assenza di azione e indifferenza (la maschera vuota). La scacchiera circostante rappresenta l'ordine burocratico in cui il male si annida pacificamente.</p>
+                </div>
+            </div>
+
+            <!-- 26. Trappola -->
+            <div class="gallery-item" data-category="3d" onclick="openLightbox(this)">
+                <img src="images/trappola.jpg" alt="Trappola" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>TRAPPOLA</h3>
+                    <p>Installazione — 30x120x10 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Installazione tridimensionale in acrilico e cartone su legno (30x120x10 cm).</p>
+                    <p class="critica"><strong>Critica:</strong> Un'opera oggettuale che esce dalla bidimensionalità della parete. Esplora la dialettica tra veglia e sogno, evidenziando come l'individuo sia costantemente intrappolato tra la razionalità del giorno e le pulsioni notturne.</p>
+                </div>
+            </div>
+
+            <!-- 27. Maschere -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/maschere.jpg" alt="Maschere" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>MASCHERE</h3>
+                    <p>Acrilico su legno — 126x25 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Sviluppo verticale stretto (126x25 cm), acrilico su legno. Una sovrapposizione di profili e maschere geometriche.</p>
+                    <p class="critica"><strong>Critica:</strong> Una riflessione d'impronta pirandelliana sulla frammentazione dell'identità. Le maschere sono così radicate da sostituirsi al vero volto, offrendo una "fatua sicurezza" che ci aliena da noi stessi.</p>
+                </div>
+            </div>
+
+            <!-- 28. L'Inverno del Cuore -->
+            <div class="gallery-item" data-category="natura" onclick="openLightbox(this)">
+                <img src="images/inverno-cuore.jpg" alt="L'Inverno del Cuore" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>L'INVERNO DEL CUORE</h3>
+                    <p>Acrilico su legno — 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (125x80 cm). Un paesaggio spoglio e geometrico che evoca alberi secchi e un bosco invernale privo di colore.</p>
+                    <p class="critica"><strong>Critica:</strong> Opera malinconica ma non disperata. L'inverno è visto come una stagione necessaria dello spirito, un momento di spoglio e ricerca delle proprie radici profonde in attesa del ritorno della luce.</p>
+                </div>
+            </div>
+
+            <!-- 29. Senza Titolo -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/senza-titolo.jpg" alt="Senza Titolo" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>SENZA TITOLO</h3>
+                    <p>Acrilico su legno — 125x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (125x80 cm). Silhouette antropomorfa isolata su una superficie scaccata destrutturata.</p>
+                    <p class="critica"><strong>Critica:</strong> Un'opera sulla solitudine e sull'illusione del soccorso esterno. La figura a terra spera in un aiuto che non arriverà, spingendo lo spettatore a prendere coscienza della propria radicale autonomia esistenziale.</p>
+                </div>
+            </div>
+
+            <!-- 30. Metamorfosi -->
+            <div class="gallery-item" data-category="optical" onclick="openLightbox(this)">
+                <img src="images/metamorfosi.jpg" alt="Metamorfosi" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>METAMORFOSI</h3>
+                    <p>Acrilico su legno — 126x80 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (126x80 cm). Trame optical che subiscono un processo di scomposizione e mutazione formale.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera descrive il cambiamento consapevole derivato dalla sofferenza. La struttura a scacchi si spezza, educando la mente al fatto che non saremo mai davvero pronti né al meglio né al peggio del destino.</p>
+                </div>
+            </div>
+
+            <!-- 31. Nascita -->
+            <div class="gallery-item" data-category="natura" onclick="openLightbox(this)">
+                <img src="images/nascita.jpg" alt="Nascita" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>NASCITA</h3>
+                    <p>Acrilico su legno — Ø 100 cm (Tondo)</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Tondo (diametro 100 cm) in acrilico su legno. Un nucleo generativo geometrico da cui si dipanano onde a scacchi.</p>
+                    <p class="critica"><strong>Critica:</strong> Ispirata al pensiero epicureo/materialista, l'opera ammonisce sul valore del tempo presente. La nascita biologica è unica e irrevocabile; la struttura geometrica circolare esorta a smettere di rinviare la felicità.</p>
+                </div>
+            </div>
+
+            <!-- 32. La Scoperta dei Colori -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/scoperta-colori.jpg" alt="La Scoperta dei Colori" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA SCOPERTA DEI COLORI</h3>
+                    <p>Acrilico e olio su legno — 30x70 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico e olio su legno (30x70 cm). Un'opera di transizione dove il bianco e nero subisce l'irruzione violenta e lirica di sfumature cromatiche colanti e luminose.</p>
+                    <p class="critica"><strong>Critica:</strong> È il manifesto poetico dell'artista. Rappresenta il passaggio dall'universo dicotomico e rigido del bianco e nero all'estasi emotiva e sensoriale del colore, inteso come nutrimento per l'anima.</p>
+                </div>
+            </div>
+
+            <!-- 33. Anima Nera -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/anima-nera.jpg" alt="Anima Nera" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>ANIMA NERA</h3>
+                    <p>Acrilico su legno — 50x50 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (50x50 cm). Una composizione scura, quasi monocroma, incentrata su forme concave e misteriose.</p>
+                    <p class="critica"><strong>Critica:</strong> Indagine sulla complessità della psiche femminile. L'oscurità del quadro non è negativa, ma protettiva: un velo steso per non profanare i segreti e le vulnerabilità che non si desidera mostrare.</p>
+                </div>
+            </div>
+
+            <!-- 34. La Solitudine -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/la-solitudine.jpg" alt="La Solitudine" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA SOLITUDINE</h3>
+                    <p>Acrilico su legno — 90x70 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (90x70 cm). Una figura isolata immersa in uno spazio cupo e opprimente.</p>
+                    <p class="critica"><strong>Critica:</strong> L'opera visualizza la disperazione che subentra quando la paura e l'isolamento diventano l'unica energia vitale, congelando l'anima in un'immobilità insostenibile.</p>
+                </div>
+            </div>
+
+            <!-- 35. L'Ombra di Se Stessi -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/ombra-se-stessi.jpg" alt="L'Ombra di Se Stessi" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>L'OMBRA DI SE STESSI (DITTICO)</h3>
+                    <p>Acrilico su legno — 200x150 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Grande dittico in acrilico su legno (200x150 cm). Una lacerazione netta separa una parte luminosa da una buia, con mani d'ombra che cercano disperatamente un contatto con la realtà.</p>
+                    <p class="critica"><strong>Critica:</strong> Rappresentazione monumentale del conflitto eterno tra bene e male. Le ombre tessono un mosaico di paure, irrompendo nella luce come promemoria della nostra natura duale e divisa.</p>
+                </div>
+            </div>
+
+            <!-- 36. La Morte -->
+            <div class="gallery-item" data-category="simbolo" onclick="openLightbox(this)">
+                <img src="images/la-morte.jpg" alt="La Morte" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA MORTE (TRITTICO)</h3>
+                    <p>Acrilico su legno — 90x70 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Trittico in acrilico su legno (90x70 cm). Mostra una figura femminile distesa, priva di volto.</p>
+                    <p class="critica"><strong>Critica:</strong> Trattazione filosofica del decesso come fine del corpo (involucro vuoto) e non della mente. L'assenza del volto, che per l'artista è il veicolo della presenza e della quotidianità, formalizza l'idea della pura assenza fisica.</p>
+                </div>
+            </div>
+
+            <!-- 37. La Pianta -->
+            <div class="gallery-item" data-category="natura" onclick="openLightbox(this)">
+                <img src="images/la-pianta.jpg" alt="La Pianta" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>LA PIANTA</h3>
+                    <p>Acrilico su legno — 70x76 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (70x76 cm). Silhouette femminile le cui membra si sviluppano in radici e rami d'albero.</p>
+                    <p class="critica"><strong>Critica:</strong> Iconografia della rinascita e della connessione tellurica. La donna è vista come asse del mondo, capace di trasformare le proprie debolezze in radici salde e chiome rigogliose.</p>
+                </div>
+            </div>
+
+            <!-- 38. Il Silenzio -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/il-silenzio.jpg" alt="Il Silenzio" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>IL SILENZIO</h3>
+                    <p>Acrilico su legno — 90x70 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (90x70 cm). Una figura con una mano serrata sulla bocca, circondata da linee tese.</p>
+                    <p class="critica"><strong>Critica:</strong> Il silenzio non come pace, ma come censura coercitiva e violenta ("arma che ferisce"). I pensieri intrappolati sono sul punto di esplodere all'interno della testa, logorando la carne.</p>
+                </div>
+            </div>
+
+            <!-- 39. L'Urlo Dell'Anima -->
+            <div class="gallery-item" data-category="inconscio" onclick="openLightbox(this)">
+                <img src="images/urlo-anima.jpg" alt="L'Urlo Dell'Anima" class="img-placeholder">
+                <div class="item-overlay">
+                    <h3>L'URLO DELL'ANIMA</h3>
+                    <p>Acrilico su legno — 70x70 cm</p>
+                </div>
+                <div class="hidden-details">
+                    <p class="desc"><strong>Descrizione:</strong> Acrilico su legno (70x70 cm). Un volto stilizzato colto in una smorfia di scarica vocale, squarciato da linee rosso vermiglio.</p>
+                    <p class="critica"><strong>Critica:</strong> Chiara eco dell'espressionismo di Munch. L'urlo è un atto catartico di autoaffermazione; il sangue rosso che irrompe sulla tela è l'unico testimone visivo della rabbia repressa che finalmente si libera.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Lightbox Modale Dinamica -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <h2 id="lightbox-title"></h2>
+                <p id="lightbox-meta"></p>
+                <div id="lightbox-description"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biografia Artistica Anonima -->
+    <section id="biografia" class="bio-section">
+        <div class="bio-container">
+            <div class="bio-text">
+                <h2>BIOGRAFIA</h2>
+                <p class="lead">L’opera dell’artista si sviluppa lungo una doppia polarità espressiva, in cui la pittura si fa strumento di indagine psicologica, catarsi ed esplorazione delle dinamiche umane.</p>
+                
+                <p>L’universo visivo dell'artista trae origine da un’intensa e rigorosa ricerca legata all’Optical Art (Op Art). In un dialogo serrato tra il bianco e il nero, la struttura della scacchiera e della griglia geometrica non si limita al mero virtuosismo prospettico, ma si trasforma in un organismo pulsante e reattivo. La geometria diventa così la gabbia razionale attraverso cui contenere, strutturare ed esorcizzare le tensioni dell'inconscio: un'architettura visiva che si deforma, si flette e si lacera sotto la spinta di conflitti interiori, presenze antropomorfe e lacerazioni emotive.</p>
+                
+                <p class="focus-text">Accanto all'ipnotismo monocromatico delle composizioni geometriche, la produzione dell'artista accoglie improvvise ed evocative irruzioni cromatiche. Il colore — che si tratti delle tonalità viscerali e sanguigne del rosso o delle campiture dense e contemplative dei blu e dei verdi marini — irrompe sulla superficie come atto di liberazione e svelamento. Attraverso cicli pittorici dedicati all'isolamento, ai legami interpersonali e alla profonda connessione tra corpo e natura, la pittura travalica il rigore della linea per farsi simbolo, materia ed espressione pura.</p>
+                
+                <p>Lavorando prevalentemente su supporto ligneo e tela, l'artista costruisce spaces prospettici tridimensionali, inganni ottici e sovrapposizioni concettuali capaci di condurre lo spettatore oltre la semplice percezione visiva. Ogni opera è un invito a varcare la soglia del reale per confrontarsi con ciò che giace nascosto sotto la superficie.</p>
+            </div>
+
+            <!-- Visual Vettoriale d'Autore -->
+            <div class="bio-visual">
+                <div class="art-frame">
+                    <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg" class="bio-artwork">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <rect width="20" height="20" fill="#111" />
+                                <rect x="20" width="20" height="20" fill="#fff" />
+                                <rect y="20" width="20" height="20" fill="#fff" />
+                                <rect x="20" y="20" width="20" height="20" fill="#111" />
+                            </pattern>
+                            <radialGradient id="distortion" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#900c3f" stop-opacity="0.9"/>
+                                <stop offset="50%" stop-color="#111111" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+                            </radialGradient>
+                        </defs>
+                        <rect width="500" height="700" fill="url(#grid)" />
+                        <circle cx="250" cy="350" r="220" fill="url(#distortion)" class="pulsing-core" />
+                        <path d="M 50,0 Q 250,350 450,700" stroke="#ffffff" stroke-width="3" fill="none"/>
+                        <path d="M 450,0 Q 250,350 50,700" stroke="#ffffff" stroke-width="3" fill="none"/>
+                        <circle cx="250" cy="350" r="80" stroke="#900c3f" stroke-width="4" fill="none"/>
+                        <circle cx="250" cy="350" r="20" fill="#ffffff"/>
+                    </svg>
+                </div>
+                <div class="critica-box">
+                    <h3>Nota Critica</h3>
+                    <p class="quote-critica">"L'artista possiede un codice originale e una forma compiutamente identificabile. Un'urgenza maggiore, un imperativo categorico obbediente solo a se stesso: il diktat primordiale dell'arte."</p>
+                    <span class="author">— Massimo Rossi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Sezione Percorso Espositivo e Pubblicazioni -->
+    <section id="mostre" class="cv-section">
+        <div class="section-title">
+            <h2>PERCORSO ESPOSITIVO & CATALOGHI</h2>
+            <p>Storico completo delle mostre, concorsi, premi e pubblicazioni</p>
+        </div>
+
+        <div class="cv-tables-container">
+            <!-- Tabella Mostre e Concorsi -->
+            <div class="cv-block">
+                <h3>Mostre & Concorsi</h3>
+                <div class="cv-table">
+                    <div class="cv-row">
+                        <div class="cv-year">Maggio 2019</div>
+                        <div class="cv-desc">Mostra en plain air “Arte sui navigli”, Milano</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">Maggio 2018</div>
+                        <div class="cv-desc">Mostra en plain air “Milano 3 Arte e poesia”</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">Maggio 2017</div>
+                        <div class="cv-desc">Mostra personale “Le Stanze” presso Ristorante il Guscio, Monza</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">Aprile 2016</div>
+                        <div class="cv-desc">Mostra personale “Oltre l’immaginazione, oltre la mente.” presso Spazio Espositivo Cassa Rurale di Treviglio (BG)</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">Marzo 2014</div>
+                        <div class="cv-desc">Mostra collettiva "L'urlo della crisi" presso Palazzo Ducale Genova (Loggiato Minore)</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">Aprile 2013</div>
+                        <div class="cv-desc">Mostra personale “Optical art: uno sguardo oltre la superficie” presso Galleria Spazio Porpora, Milano</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Mostra collettiva Premio Cromica 2012 con il quadro <em>"La solitudine"</em>, Arezzo</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Premio Wine Art 2012 — Pubblicazione del quadro <em>"Il silenzio"</em> in un'etichetta</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Attestato di nomina di Accademico Internazionale delle Avanguardie Artistiche</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2011</div>
+                        <div class="cv-desc">Partecipazione 8° Concorso Internazionale di Pittura Trofeo G.B. Moroni</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2011</div>
+                        <div class="cv-desc">Partecipazione Biennale di Lecce 2011 con il quadro <em>"La nebbia interna"</em></div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2010</div>
+                        <div class="cv-desc">Primo Premio Grandi Firme 2010</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2010</div>
+                        <div class="cv-desc">Mostra collettiva a Porto Venere</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2009</div>
+                        <div class="cv-desc">Mostra collettiva Love Art 2009 con il quadro <em>"L'amore per lo stesso sesso"</em>, Venezia</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabella Cataloghi e Pubblicazioni -->
+            <div class="cv-block">
+                <h3>Inserimento in Cataloghi & Stampa</h3>
+                <div class="cv-table">
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Pubblicazione sul libro Accademia Internazionale Avanguardie Artistiche 2012 con i quadri <em>"La solitudine"</em> e <em>"Il silenzio"</em></div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Pubblicazione del quadro <em>"La solitudine"</em> sul catalogo Premio Cromica 2012</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2012</div>
+                        <div class="cv-desc">Pubblicazione del quadro <em>"Il silenzio"</em> sull'etichetta di vino Barolo (Premio Wine Art)</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2011</div>
+                        <div class="cv-desc">Pubblicazione del quadro <em>"La nebbia interna"</em> sul catalogo Biennale di Lecce 2011</div>
+                    </div>
+                    <div class="cv-row">
+                        <div class="cv-year">2009</div>
+                        <div class="cv-desc">Pubblicazione del quadro <em>"L'amore per lo stesso sesso"</em> sul catalogo Premio Love Art 2009</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contatti -->
+    <section id="contatti" class="contact-section">
+        <h2>CONTATTI</h2>
+        <p class="contact-sub">Per informazioni sull'acquisto delle opere, commissioni o esposizioni.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>Studio:</strong> Italia</p>
+                <p><strong>Email:</strong> <a href="mailto:gridunbound@gmail.com">gridunbound@gmail.com</a></p>
+                <p><strong>Instagram:</strong> <a href="https://instagram.com/grid_unbound_art" target="_blank">@grid_unbound_art</a></p>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Messaggio inviato con successo');">
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Il tuo messaggio..." rows="5" required></textarea>
+                <button type="submit" class="btn-minimal">Invia Messaggio</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Grid Unbound Art. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
